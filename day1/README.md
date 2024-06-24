@@ -10,7 +10,6 @@ It's used to represent the HTML document as a tree.
 https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 
 > [!IMPORTANT]
-
 > Virtual DOM helps us compose user interfaces declaratively rather than imperatively.
 > 'imperative' means you are doing the set of operations yourself.
 > 'declarative' means you are just declaring your desired end state.
