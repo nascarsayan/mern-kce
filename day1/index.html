@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
     <body>
-        Hello World
     </body>
+
+    <script type="module">
+        import { createElement, render } from 'https://esm.sh/preact';
+
+        let vdom = createElement(
+            'p',
+            { class: 'big', style: {color: 'red'} },
+            createElement('span', null, 'Hello'),
+            createElement('span', null, 'World'),
+            createElement(
+                'ul',
+                null,
+                createElement('li', null, 'Item 1'),
+                createElement('li', null, 'Item 2')
+            )
+        );
+
+        render(vdom, document.body);
+    </script>
 </html>

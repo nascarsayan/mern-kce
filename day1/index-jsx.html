@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    </body>
+
+    <script type="module">
+        import { createElement, render } from 'https://esm.sh/preact';
+        
+        import htm from 'https://esm.sh/htm';
+        const html = htm.bind(createElement);
+
+        function VDom (props) {
+            return html`
+                <p class="big" style=${{color: 'red'}}>
+                    <span>Hello</span>
+                    <span>${props.name}</span>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                    </ul>
+                </p>
+            `;
+        }
+        render(html`<${VDom} name="World" x=y />`, document.body);
+    </script>
+</html>
+
+<!-- 
+- VDom is a function that returns a virtual DOM element.
+- React will create the required DOM elements based on the VDom function. In this case it will create the following elements:
+    - p with class big and style color: red
+    - span with text Hello
+    - span with text World
+    - ul
+        - li with text Item 1
+        - li with text Item 2
+
+- name="World" is the properties of the VDom component.
+It's popularly also called Props in react.
+
+- htm is an external library that allows us to write HTML inside strings.
+
+- Writing HTML iunside Javascript is called JSX (Javascript XML).
+
+-->
