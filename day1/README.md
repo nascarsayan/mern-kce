@@ -67,5 +67,15 @@ Interface simply means a set of external rules, protocols etc. which are predefi
 
 #### Virtual DOM
 
-To specify dseclaratively the desired end DOM result, we are using the Virtual DOM.
+To specify declaratively the desired end DOM result, we are using the Virtual DOM.
 Preact / React works to manipulate the DOM as per the requirement, so that the end result is what we initially specified.
+
+[This file shows you how to use preact as standalone inside HTML](./index.html)
+
+[This file shows you how to use preact as standalone inside HTML with JSX syntax](./index-jsx.html)
+
+### Scaffolding a react app.
+
+Reference: https://vitejs.dev/guide/#scaffolding-your-first-vite-project
+
+`npm create vite@latest my-super-app -- --template react`
