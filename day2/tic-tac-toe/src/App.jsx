@@ -48,13 +48,17 @@ function Counter({ value }) {
 // the information of the current player in the board.
 // it should not change the board's current player
 
-function Square({ player, setPlayer }) {
+function Square({ player, setPlayer, board, setBoard, index }) {
 
   const [p, setP] = useState('');
 
   return (
     <button className="square"
       onClick={() => {
+        // ignore clicks on already filled cells.
+        if (p !== '') {
+          return;
+        }
         setP(player);
         let newPlayer;
         if (player === 'X') {
@@ -75,6 +79,8 @@ function Square({ player, setPlayer }) {
 function Board() {
 
   const [player, setPlayer] = useState('X')
+  const [winner, setWinner] = useState('')
+  const [board, setBoard] = useState(Array(9).fill(null)) // [null, null, ... 9 times]
 
   // const x = 5;
   // const abc = {x: x};
@@ -83,19 +89,20 @@ function Board() {
   return (
     <>
       <div className="board-row">
-        <Square {...{player, setPlayer}} /> 
-        <Square {...{player, setPlayer}} />
-        <Square {...{player, setPlayer}} />
+        {/* Square needs to know the index inside the board */}
+        <Square {...{player, setPlayer, winner, board, setBoard, index: 0}} /> 
+        <Square {...{player, setPlayer, winner, board, setBoard, index: 1}} />
+        <Square {...{player, setPlayer, winner, board, setBoard, index: 2}} />
       </div>
       <div className="board-row">
-        <Square {...{player, setPlayer}} />
-        <Square {...{player, setPlayer}} />
-        <Square {...{player, setPlayer}} />
+        <Square {...{player, setPlayer, winner, board, setBoard, index: 3}} />
+        <Square {...{player, setPlayer, winner, board, setBoard, index: 4}} />
+        <Square {...{player, setPlayer, winner, board, setBoard, index: 5}} />
       </div>
       <div className="board-row">
-        <Square {...{player, setPlayer}} />
-        <Square {...{player, setPlayer}} />
-        <Square {...{player, setPlayer}} />
+        <Square {...{player, setPlayer, winner, board, setBoard, index: 6}} />
+        <Square {...{player, setPlayer, winner, board, setBoard, index: 7}} />
+        <Square {...{player, setPlayer, winner, board, setBoard, index: 8}} />
       </div>
       <h3 style={{ margin: '20px'}}>Counter</h3>
       <p>
