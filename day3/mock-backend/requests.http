@@ -1,0 +1,36 @@
+### Get all assignments
+
+GET http://0.0.0.0:3000/assignments
+
+### Get assignment by id
+
+GET http://0.0.0.0:3000/assignments/1
+
+### Get all groups
+
+GET http://0.0.0.0:3000/groups
+
+### Get group by id
+
+GET http://0.0.0.0:3000/groups/1
+
+### Create new assignment
+
+POST http://0.0.0.0:3000/assignments
+Content-Type: application/json
+
+{
+    "id": "4",
+    "name": "Sample Assignment",
+    "description": "This is a sample assignment"
+}
+
+### Update assignment
+
+PUT http://0.0.0.0:3000/assignments/4
+Content-Type: application/json
+
+{
+    "name": "Sample Assignment Updated",
+    "description": "This is a sample assignment updated"
+}

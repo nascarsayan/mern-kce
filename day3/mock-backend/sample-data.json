@@ -1,0 +1,79 @@
+{
+  "assignments": [
+    {
+      "id": "1",
+      "name": "Inventory Management System",
+      "description": "A system to manage inventory of a store. It should be able to add, update, delete and search for items in the inventory. It should also be able to generate reports on the inventory."
+    },
+    {
+      "id": "2",
+      "name": "Hotel Reservation System",
+      "description": "A system to manage hotel reservations. It should be able to add, update, delete and search for reservations. It should also be able to generate reports on the reservations."
+    },
+    {
+      "id": "3",
+      "name": "Airline Reservation System",
+      "description": "A system to manage airline reservations. It should be able to add, update, delete and search for reservations. It should also be able to generate reports on the reservations."
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "students": [
+        {
+          "roll": "A102",
+          "name": "Bob Smith"
+        },
+        {
+          "roll": "A103",
+          "name": "Jack Dorman"
+        },
+        {
+          "roll": "A110",
+          "name": "Bruce Lee"
+        }
+      ],
+      "assignmentId": "1"
+    },
+    {
+      "id": "2",
+      "students": [
+        {
+          "roll": "A101",
+          "name": "Alice Cooper"
+        },
+        {
+          "roll": "A104",
+          "name": "John Doe"
+        },
+        {
+          "roll": "A111",
+          "name": "Chuck Norris"
+        }
+      ],
+      "assignmentId": "2"
+    },
+    {
+      "id": "3",
+      "students": [
+        {
+          "roll": "A105",
+          "name": "Jane Doe"
+        },
+        {
+          "roll": "A106",
+          "name": "John Smith"
+        },
+        {
+          "roll": "A112",
+          "name": "Bruce Wayne"
+        },
+        {
+          "roll": "A113",
+          "name": "Clark Kent"
+        }
+      ],
+      "assignmentId": "3"
+    }
+  ]
+}
