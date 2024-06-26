@@ -13,3 +13,7 @@
     - `npm install react-router-dom`
     - Add a list containing the router mappings.
     - In the navbar, use `<a>` element for add link to the different pages.
+
+4. [Create a mock backend following the steps here](../mock-backend/README.md)
+
+5. Use the mock backend for showing the list of projects and groups.
