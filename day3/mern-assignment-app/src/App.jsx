@@ -5,6 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Navbar from './components/Navbar'
+import Home from './components/Home';
+import CreateProject from './components/CreateProject';
 
 
 function App() {
@@ -12,11 +14,19 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
+      element: <Home/>,
+    },
+    {
+      path: "/projects",
       element: <Projects/>,
     },
     {
       path: "/groups",
       element: <Groups/>,
+    },
+    {
+      path: "/projects/create",
+      element: <CreateProject/>,
     }
   ]);
 
