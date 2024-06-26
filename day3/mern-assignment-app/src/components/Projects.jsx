@@ -57,6 +57,23 @@ function Projects() {
         fetchProjectList()
     }, [])
 
+    async function deleteProject(id) {
+        try {
+            const response = await fetch(`http://localhost:3000/assignments/${id}`, {
+                method: 'DELETE',
+            })
+            if (response.ok) {
+                alert('Project deleted successfully')
+                window.location.reload()
+            } else {
+                alert('Failed to delete project')
+            }
+        } catch (error) {
+            console.error(error)
+            alert('Failed to delete project. Check console for error details.')
+        }
+    }
+
     return (
         <>
             <div>
@@ -67,6 +84,12 @@ function Projects() {
                             <h2>{project.name}</h2>
                             <p>{project.description}</p>
                             <a href={`/projects/update/${project.id}`}>Update</a>
+                            <button
+                                style={{ marginLeft: '10px' }}
+                                onClick={() => deleteProject(project.id)}
+                            >
+                                Delete
+                            </button>
                         </li>
                     ))}
                 </ul>
