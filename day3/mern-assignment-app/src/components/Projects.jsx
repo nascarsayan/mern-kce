@@ -57,6 +57,24 @@ function Projects() {
         fetchProjectList()
     }, [])
 
+    // We want to focus on the project id if it is present in the URL.
+    useEffect(() => {
+        // Manual DOM manipulation required to scroll to the project with the id in the URL.
+        // useRef hook can also be used to get the reference to the DOM element.
+        // We will need an array of refs to store the references to all the projects,
+        // which is difficult to manage.
+        const currentURL = window.location.href;
+        //get the id component xyz from http://url#xyz
+        const lastHashPos = currentURL.lastIndexOf('#');
+        if (lastHashPos !== -1) {
+            const id = currentURL.substring(lastHashPos + 1);
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView();
+            }
+        }
+    }, [projects])
+
     async function deleteProject(id) {
         try {
             const response = await fetch(`http://localhost:3000/assignments/${id}`, {
@@ -80,8 +98,23 @@ function Projects() {
                 <h1>Projects</h1>
                 <ul>
                     {projects.map((project) => (
-                        <li key={project.id}>
-                            <h2>{project.name}</h2>
+                        <li key={project.id}
+                            style={
+                                {
+                                    border: '1px solid black',
+                                    padding: '10px',
+                                    margin: '10px',
+                                    listStyleType: 'none'
+                                }
+                            }
+                        >
+                            <h2>
+                                <a
+                                    href={`#project-${project.id}`}
+                                    id={`project-${project.id}`}>
+                                    {project.name}
+                                </a>
+                            </h2>
                             <p>{project.description}</p>
                             <a href={`/projects/update/${project.id}`}>Update</a>
                             <button

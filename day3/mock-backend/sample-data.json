@@ -14,6 +14,51 @@
       "id": "3",
       "name": "Airline Reservation System",
       "description": "A system to manage airline reservations. It should be able to add, update, delete and search for reservations. It should also be able to generate reports on the reservations."
+    },
+    {
+      "id": "4",
+      "name": "Library Management System",
+      "description": "A system to manage library books. It should be able to add, update, delete and search for books in the library. It should also be able to generate reports on the books."
+    },
+    {
+      "id": "5",
+      "name": "Student Management System",
+      "description": "A system to manage student records. It should be able to add, update, delete and search for students. It should also be able to generate reports on the students."
+    },
+    {
+      "id": "6",
+      "name": "Employee Management System",
+      "description": "A system to manage employee records. It should be able to add, update, delete and search for employees. It should also be able to generate reports on the employees."
+    },
+    {
+      "id": "7",
+      "name": "Hospital Management System",
+      "description": "A system to manage hospital records. It should be able to add, update, delete and search for patients. It should also be able to generate reports on the patients."
+    },
+    {
+      "id": "8",
+      "name": "Banking System",
+      "description": "A system to manage bank accounts. It should be able to add, update, delete and search for accounts. It should also be able to generate reports on the accounts."
+    },
+    {
+      "id": "9",
+      "name": "Online Shopping System",
+      "description": "A system to manage online shopping. It should be able to add, update, delete and search for products. It should also be able to generate reports on the products."
+    },
+    {
+      "id": "10",
+      "name": "Social Networking System",
+      "description": "A system to manage social networking. It should be able to add, update, delete and search for users. It should also be able to generate reports on the users."
+    },
+    {
+      "id": "11",
+      "name": "E-Learning System",
+      "description": "A system to manage e-learning. It should be able to add, update, delete and search for courses. It should also be able to generate reports on the courses."
+    },
+    {
+      "id": "12",
+      "name": "Online Ticket Booking System",
+      "description": "A system to manage online ticket booking. It should be able to add, update, delete and search for tickets. It should also be able to generate reports on the tickets."
     }
   ],
   "groups": [
@@ -33,7 +78,7 @@
           "name": "Bruce Lee"
         }
       ],
-      "assignmentId": "1"
+      "assignmentId": "6"
     },
     {
       "id": "2",
@@ -51,7 +96,7 @@
           "name": "Chuck Norris"
         }
       ],
-      "assignmentId": "2"
+      "assignmentId": "8"
     },
     {
       "id": "3",
@@ -73,7 +118,7 @@
           "name": "Clark Kent"
         }
       ],
-      "assignmentId": "3"
+      "assignmentId": "12"
     }
   ]
 }

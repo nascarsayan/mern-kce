@@ -31,7 +31,9 @@ function Groups() {
                                     {student.name} ({student.roll})
                                 </div>
                             ))}
-                            <h3>Assignment ID: {group.assignmentId}</h3>
+                            <a href={`/projects#project-${group.assignmentId}`} >
+                                Assignment {group.assignmentId}
+                            </a>
                         </li>
                     ))}
                 </ul>
