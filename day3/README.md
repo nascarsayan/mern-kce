@@ -1,5 +1,10 @@
 # Mern Assignment App
 
+> [!CAUTION]
+> For Windows Users, `npx` command will fail if Execution of Unsigned Scripts is disabled. To enable it, run PowerShell as Administrator and run the following command:
+> `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine` or
+> `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
+
 ## Run locally
 
 1. Clone the repository.
