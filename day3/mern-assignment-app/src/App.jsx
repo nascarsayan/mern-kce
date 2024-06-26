@@ -27,6 +27,10 @@ function App() {
     {
       path: "/projects/create",
       element: <CreateProject/>,
+    },
+    {
+      path: "/projects/update/:id",
+      element: <CreateProject/>,
     }
   ]);
 

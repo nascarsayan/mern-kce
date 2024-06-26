@@ -66,6 +66,7 @@ function Projects() {
                         <li key={project.id}>
                             <h2>{project.name}</h2>
                             <p>{project.description}</p>
+                            <a href={`/projects/update/${project.id}`}>Update</a>
                         </li>
                     ))}
                 </ul>
