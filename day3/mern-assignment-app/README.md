@@ -1,8 +1,15 @@
-# React + Vite
+# Mern Assignment App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Create the boilerplate
+`npm create vite@latest mern-assignment-app -- --template react`
 
-Currently, two official plugins are available:
+2. Update boilerplate:
+    - Cleanup CSS.
+    - Add 2 components in `components` folder.
+    - Add a navbar. Use the two components in our primary component: App.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+3. Add react router dom. Reference: https://reactrouter.com/en/main/start/tutorial
+    - `npm install react-router-dom`
+    - Add a list containing the router mappings.
+    - In the navbar, use `<a>` element for add link to the different pages.
