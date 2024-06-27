@@ -5,6 +5,12 @@
 > `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine` or
 > `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
 
+> [!CAUTION]
+> If you get the error while running npx command <br/>
+> ENOENT: no such file or directory, lstat 'C:\Users\student.DR-06\AppData\Roaming\npm'<br/>
+> To fix this, create the required folder by running this in PowerShell:<br/>
+> mkdir $env:USERPROFILE\AppData\Roaming\npm
+
 ## Run locally
 
 1. Clone the repository.
