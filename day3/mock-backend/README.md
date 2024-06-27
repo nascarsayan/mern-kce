@@ -3,12 +3,11 @@
 https://github.com/typicode/json-server
 
 1. Create the file containing sample data. For example, [sample-data.json](./sample-data.json).
-2. `npm install json-server`
-3. While running command in step 4 below, you might get error like this:
+2. While running command in step 3 below, you might get error like this:
     `ENOENT: no such file or directory, lstat 'C:\Users\student.DR-06\AppData\Roaming\npm'`
     To fix this, create the required folder by running this in PowerShell:
     `mkdir $env:USERPROFILE\AppData\Roaming\npm`
-4. Then run the following in PowerShell :
+3. Then run the following in PowerShell :
     `npx json-server sample-data.json --host 0.0.0.0`
 
     You will get the output from json-server, containing the list of endpoints.
