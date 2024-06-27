@@ -9,6 +9,8 @@ function CreateOrUpdateProject() {
     // and the URL is
     //           /projects/update/1
     // then useParams() will be a dictionary { id: "1" }
+    // id will not be set in the browser
+    // if the user is creating a new project.
     const { id } = useParams();
     const [projectName, setProjectName] = useState('')
     const [projectDescription, setProjectDescription] = useState('')
