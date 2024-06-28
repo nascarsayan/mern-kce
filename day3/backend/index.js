@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { randomUUID } from "crypto";
+import cors from "cors";
 
 const app = express();
 
@@ -12,14 +13,14 @@ app.use(bodyParser.json());
 // Some examples are setting CORS headers, adding logging, parsing JSON, etc.
 // Middleware is added using app.use.
 
-// We are setting CORS headers manually here. Check README.md for details on CORS.
-// We can also use the cors package to do this.
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-    res.header("Access-Control-Allow-Headers", "Content-Type");
-    next();
-});
+app.use(cors());
+// We can also set the headers manually using a custom middleware function.
+// app.use((req, res, next) => {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+//     res.header("Access-Control-Allow-Headers", "Content-Type");
+//     next();
+// });
 
 app.get("/", (req, res) => {
     res.send("Hello World!");

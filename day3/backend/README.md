@@ -74,3 +74,10 @@ The idea here is to replicate the behaviour of `json-server` using `express` and
     ```
 
     3. After adding the 3 headers in the middleware, the requests will now work.
+
+    4. We can also use the cors middleware package instead of setting the headers manually. [Reference](https://expressjs.com/en/resources/middleware/cors.html)
+    Install the package `npm i cors`
+    ```js
+    const cors = require('cors');
+    app.use(cors());
+    ```
