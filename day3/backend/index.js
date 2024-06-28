@@ -95,6 +95,10 @@ app.delete("/assignments/:id", (req, res) => {
     }
 });
 
+app.get("/groups", (req, res) => {
+    res.json(groups);
+});
+
 app.listen(2000, () => {
     console.log("Server is running on port 2000");
 });

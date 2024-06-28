@@ -1,5 +1,7 @@
 ### Step by Step
 
+The idea here is to replicate the behaviour of `json-server` using `express` and `node.js`.
+
 1. Creating a new Node.js project
     1. Run `npm init` to create a new package.json file in the current directory.
     2. Add some dummy console.log code in a file `index.js` in the current directory.
@@ -20,3 +22,5 @@
 5. Add PUT, POST and DELETE routes for assignments.
     1. Install `body-parser` and use it as a middleware to parse the request body as JSON. [Reference](https://expressjs.com/en/resources/middleware/body-parser.html)
     This is required to parse the request body in POST and PUT requests. `npm i body-parser`
+
+6. Add a GET `/groups` route to get all the groups.
