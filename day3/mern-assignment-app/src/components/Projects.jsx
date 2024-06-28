@@ -38,7 +38,7 @@ function Projects() {
 
         // await is another way to handle Promises instead of the .then().catch() syntax.
         try {
-            const response = await fetch('http://localhost:3000/assignments')
+            const response = await fetch('http://localhost:2000/assignments')
             const data = await response.json()
             setProjects(data)
         } catch (error) {
@@ -77,7 +77,7 @@ function Projects() {
 
     async function deleteProject(id) {
         try {
-            const response = await fetch(`http://localhost:3000/assignments/${id}`, {
+            const response = await fetch(`http://localhost:2000/assignments/${id}`, {
                 method: 'DELETE',
             })
             if (response.ok) {

@@ -5,7 +5,7 @@ function Groups() {
     const [groups, setGroups] = useState([])
     async function fetchGroups() {
         try {
-            const response = await fetch('http://localhost:3000/groups')
+            const response = await fetch('http://localhost:2000/groups')
             const data = await response.json()
             setGroups(data)
         }

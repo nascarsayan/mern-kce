@@ -18,7 +18,7 @@ function CreateOrUpdateProject() {
     useEffect(() => {
         async function fetchProject() {
             try {
-                const response = await fetch(`http://localhost:3000/assignments/${id}`)
+                const response = await fetch(`http://localhost:2000/assignments/${id}`)
                 const data = await response.json()
                 setProjectName(data.name)
                 setProjectDescription(data.description)
@@ -37,7 +37,7 @@ function CreateOrUpdateProject() {
             let response;
             if (!id) {
                 response = await fetch(
-                    'http://localhost:3000/assignments', {
+                    'http://localhost:2000/assignments', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ function CreateOrUpdateProject() {
                 })
             } else {
                 response = await fetch(
-                    `http://localhost:3000/assignments/${id}`, {
+                    `http://localhost:2000/assignments/${id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

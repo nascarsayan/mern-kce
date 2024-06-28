@@ -6,6 +6,21 @@ const app = express();
 
 app.use(bodyParser.json());
 
+// Middleware is a function that runs before the request handler.
+// Middleware can modify the request or response objects.
+// These are typically used for performing common tasks for multiple routes.
+// Some examples are setting CORS headers, adding logging, parsing JSON, etc.
+// Middleware is added using app.use.
+
+// We are setting CORS headers manually here. Check README.md for details on CORS.
+// We can also use the cors package to do this.
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    next();
+});
+
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });
@@ -96,6 +111,8 @@ app.delete("/assignments/:id", (req, res) => {
 });
 
 app.get("/groups", (req, res) => {
+    // You can set the headers of the response using res.header.
+    // res.header("Access-Control-Allow-Origin", "*");
     res.json(groups);
 });
 
