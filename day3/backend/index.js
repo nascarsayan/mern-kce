@@ -1,6 +1,10 @@
 import express from "express";
+import bodyParser from "body-parser";
+import { randomUUID } from "crypto";
 
 const app = express();
+
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
     res.send("Hello World!");
@@ -55,6 +59,41 @@ app.get("/assignments/:id", (req, res) => {
     }
 });
 
+app.post("/assignments", (req, res) => {
+    const assignment = req.body;
+    if (!assignment.id) {
+        // If the id is not set, generate and use a random UUID.
+        assignment.id = randomUUID();
+    }
+    assignments.push(assignment);
+    res.json(assignment);
+});
+
+app.put("/assignments/:id", (req, res) => {
+    const id = req.params.id;
+    for (let i = 0; i < assignments.length; i++) {
+        if (assignments[i].id === id) {
+            // Replace the assignment with the new assignment.
+            // id might not be in the body, so we are using the id from the URL.
+            assignments[i] = { id, ...req.body };
+            res.json(assignments[i]);
+            return;
+        }
+    }
+    res.status(404).send("Assignment not found");
+});
+
+app.delete("/assignments/:id", (req, res) => {
+    const id = req.params.id;
+    const index = assignments.findIndex(assignment => assignment.id === id);
+    if (index === -1) {
+        res.status(404).send("Assignment not found");
+    } else {
+        // Remove the element at the index.
+        assignments.splice(index, 1);
+        res.send("Assignment deleted");
+    }
+});
 
 app.listen(2000, () => {
     console.log("Server is running on port 2000");

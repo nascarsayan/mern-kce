@@ -6,3 +6,26 @@ GET http://localhost:2000/assignments
 
 GET http://localhost:2000/assignments/12
 
+### Create assignment
+
+POST http://localhost:2000/assignments
+Content-Type: application/json
+
+{
+    "title": "Assignment 1",
+    "description": "Assignment 1 description"
+}
+
+### Create or Update assignment
+
+PUT http://localhost:2000/assignments/12
+Content-Type: application/json
+
+{
+    "title": "Assignment 12",
+    "description": "Assignment 12 updated"
+}
+
+### Delete assignment
+
+DELETE http://localhost:2000/assignments/12

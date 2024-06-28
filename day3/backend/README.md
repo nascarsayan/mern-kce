@@ -16,3 +16,7 @@
     In our backend, we are using the port 2000 to run the server. So, all requests will be made to `http://localhost:2000/<some-URL-path>`.
 
 4. Add sample routes for assignments : LIST and GET by ID.
+
+5. Add PUT, POST and DELETE routes for assignments.
+    1. Install `body-parser` and use it as a middleware to parse the request body as JSON. [Reference](https://expressjs.com/en/resources/middleware/body-parser.html)
+    This is required to parse the request body in POST and PUT requests. `npm i body-parser`
