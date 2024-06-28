@@ -11,3 +11,8 @@
     2. Add the sample backend code in the `index.js` file.
     3. Set `"type": "module",` in the `package.json` file to use ES6 import/export syntax.
     4. Run `npm start` to run the express server.
+
+3. Create a `requests.http` and keep on adding the HTTP URLs to test the backend.<br/>
+    In our backend, we are using the port 2000 to run the server. So, all requests will be made to `http://localhost:2000/<some-URL-path>`.
+
+4. Add sample routes for assignments : LIST and GET by ID.
